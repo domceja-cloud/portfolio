@@ -3,106 +3,303 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Salesforce GTM Messaging — Dominic Ceja</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="style.css" />
+
   <style>
-    .case-wrap { max-width: 980px; margin: 0 auto; padding: 80px 28px 120px; }
-    .back { display:inline-block; margin-bottom:50px; color:var(--muted); }
-    .case-kicker { color:var(--muted); font-weight:600; }
-    .case-title { font-size:clamp(2.8rem,6vw,5.2rem); line-height:1.06; }
-    .case-summary { font-size:1.25rem; color:#3e3e3e; max-width:760px; }
-    .case-section { padding:42px 0; border-top:1px solid var(--line); }
+    .case-wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 80px 28px 120px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 50px;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .back:hover {
+      color: var(--text);
+    }
+
+    .case-kicker {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .case-title {
+      font-size: clamp(2.8rem, 6vw, 5.2rem);
+      line-height: 1.06;
+    }
+
+    .case-summary {
+      font-size: 1.25rem;
+      color: #3e3e3e;
+      max-width: 760px;
+      margin-bottom: 60px;
+    }
+
+    .case-section {
+      padding: 42px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .case-section h2 {
+      font-size: 2rem;
+    }
+
     .browser-window {
-      margin-top:24px;
-      border:1px solid var(--line);
-      border-radius:18px;
-      overflow:hidden;
-      background:#ffffff;
-      box-shadow:0 10px 24px rgba(31,42,68,.05);
+      margin-top: 24px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 10px 24px rgba(31, 42, 68, 0.05);
     }
+
     .browser-topbar {
-      display:flex;
-      align-items:center;
-      gap:8px;
-      padding:12px 16px;
-      background:#f3efe8;
-      border-bottom:1px solid var(--line);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      background: #f3efe8;
+      border-bottom: 1px solid var(--line);
     }
+
     .browser-dot {
-      width:10px;
-      height:10px;
-      border-radius:50%;
-      background:#cbb7a5;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #cbb7a5;
     }
+
     .browser-address {
-      margin-left:10px;
-      padding:7px 12px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      font-size:.86rem;
-      color:var(--muted);
-      background:#fffaf4;
-      flex:1;
+      margin-left: 10px;
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 0.86rem;
+      color: var(--muted);
+      background: #fffaf4;
+      flex: 1;
     }
+
     .browser-body {
-      min-height:380px;
-      background:linear-gradient(180deg,#f8fafc,#e7efe7);
-      display:grid;
-      place-items:center;
-      text-align:center;
-      color:#5C4033;
-      padding:24px;
-      font-weight:600;
+      min-height: 380px;
+      background: linear-gradient(180deg, #f8fafc, #e7efe7);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: #5C4033;
+      padding: 24px;
+      font-weight: 600;
     }
+
     .browser-caption {
-      margin-top:14px;
-      color:#4b5563;
+      margin-top: 14px;
+      color: #4b5563;
     }
   </style>
 </head>
+
 <body>
   <main class="case-wrap">
     <a class="back" href="index.html">← back to portfolio</a>
 
-    <p class="case-kicker">Salesforce · Messaging + GTM</p>
-    <h1 class="case-title">Bringing Agentforce and Starter Suite stories to market</h1>
+    <p class="case-kicker">
+      Salesforce · Messaging + GTM
+    </p>
+
+    <h1 class="case-title">
+      Bringing Agentforce and Starter Suite stories to market
+    </h1>
+
     <p class="case-summary">
-      A browser-window style layout for showing website copy, landing pages, launch materials, and other customer-facing
-      messaging artifacts in a clean, portfolio-friendly way.
+      I worked across product messaging, web copy, launch content, and sales enablement for
+      Salesforce products including Agentforce and Starter Suite. A lot of the work came down
+      to taking technical capabilities and turning them into language customers and internal teams
+      could use more easily.
     </p>
 
     <section class="case-section">
-      <p class="eyebrow">01 · overview</p>
-      <h2>What this work involved</h2>
-      <p>[Summarize the cross-functional work across web copy, launch content, product walkthroughs, enablement, and messaging.]</p>
+      <p class="eyebrow">01 · the challenge</p>
+
+      <h2>
+        Making technical products easier to understand
+      </h2>
+
+      <p>
+        Agentforce and Starter Suite each came with a different messaging challenge. Both had
+        strong product stories, but those stories still had to be translated into language that made
+        sense to the audiences seeing them for the first time.
+      </p>
+
+      <p>
+        I spent a lot of my time working in that middle layer between product priorities and
+        customer-facing communication, helping shape how features showed up across web, campaign,
+        social, and enablement materials.
+      </p>
     </section>
 
     <section class="case-section">
-      <p class="eyebrow">02 · artifact display</p>
-      <h2>Landing page / web copy window</h2>
-      <p>Use a screenshot crop of a live page or a polished mockup and drop it into this browser frame.</p>
+      <p class="eyebrow">02 · my role</p>
+
+      <h2>
+        Connecting product, message, and launch
+      </h2>
+
+      <p>
+        I developed and refined launch materials across Salesforce.com product pages, product
+        walkthroughs, creator scripts, launch recaps, campaign briefs, and sales enablement.
+      </p>
+
+      <p>
+        That meant working closely with Product Marketing, Growth, Web, Legal, Brand, Localization,
+        Paid Media, and Sales so the messaging stayed accurate and consistent as it moved from one
+        channel to another.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <p class="eyebrow">03 · product messaging</p>
+
+      <h2>
+        Turning internal product language into customer-facing copy
+      </h2>
+
+      <p>
+        For web and launch content, I focused on making product value easier to understand quickly.
+        I worked on headlines, body copy, CTAs, and supporting messaging, with an emphasis on tying
+        features back to customer needs and use cases.
+      </p>
 
       <div class="browser-window">
         <div class="browser-topbar">
           <span class="browser-dot"></span>
           <span class="browser-dot"></span>
           <span class="browser-dot"></span>
-          <div class="browser-address">salesforce.com/small-business/starter/</div>
+
+          <div class="browser-address">
+            salesforce.com/small-business/starter/
+          </div>
         </div>
+
         <div class="browser-body">
-          Add a Starter Suite or Agentforce webpage screenshot here
+          Add Starter Suite landing-page screenshot here
         </div>
       </div>
-      <p class="browser-caption">Caption the artifact with what you wrote or influenced, and how the page fit into the larger GTM story.</p>
+
+      <p class="browser-caption">
+        Starter Suite web messaging. Add a short caption explaining which headlines,
+        body copy, CTAs, or positioning you directly contributed to.
+      </p>
     </section>
 
     <section class="case-section">
-      <p class="eyebrow">03 · more proof</p>
-      <h2>Related materials</h2>
-      <p>[You can duplicate this browser module for launch recaps, one-pagers, walkthroughs, or enablement assets.]</p>
+      <p class="eyebrow">04 · product messaging</p>
+
+      <h2>
+        Making Agentforce feel concrete
+      </h2>
+
+      <p>
+        Agentforce brought a different kind of challenge because the product sat in a fast-moving
+        AI category. The goal was to make the technology feel useful and specific without flattening
+        what made the product interesting.
+      </p>
+
+      <p>
+        I supported customer-facing messaging and launch materials that connected technical
+        capabilities to practical business outcomes and clearer reasons to care.
+      </p>
+
+      <div class="browser-window">
+        <div class="browser-topbar">
+          <span class="browser-dot"></span>
+          <span class="browser-dot"></span>
+          <span class="browser-dot"></span>
+
+          <div class="browser-address">
+            salesforce.com/agentforce/
+          </div>
+        </div>
+
+        <div class="browser-body">
+          Add Agentforce webpage screenshot here
+        </div>
+      </div>
+
+      <p class="browser-caption">
+        Agentforce launch messaging. Use this caption to explain the copy, CTA, or narrative you helped shape.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <p class="eyebrow">05 · launch enablement</p>
+
+      <h2>
+        Giving teams a consistent story to work from
+      </h2>
+
+      <p>
+        The customer story also had to work internally. I developed launch recaps, product
+        walkthroughs, campaign briefs, and sales-facing materials that helped teams understand
+        key capabilities, use cases, and campaign priorities.
+      </p>
+
+      <p>
+        Those materials helped connect product messaging to execution across Sales, Marketing,
+        and partner teams.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <p class="eyebrow">06 · cross-functional execution</p>
+
+      <h2>
+        Keeping the story consistent across teams
+      </h2>
+
+      <p>
+        Getting the work live involved a lot of coordination across Product, Growth, Web Experience,
+        Brand, Legal, Localization, agencies, creators, and Paid Media.
+      </p>
+
+      <p>
+        I helped manage those handoffs and reviews while keeping the messaging tied back to the
+        original product story.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <p class="eyebrow">07 · what I learned</p>
+
+      <h2>
+        Clarity shapes how people experience the product
+      </h2>
+
+      <p>
+        This work made me more interested in the communication side of product marketing.
+        The way a product is explained has a real effect on whether customers understand it,
+        whether teams can sell it, and whether people can picture themselves using it.
+      </p>
+
+      <p>
+        That translation from product complexity to customer clarity is one of the parts of
+        product marketing I want to keep developing.
+      </p>
     </section>
   </main>
 </body>
