@@ -3,176 +3,354 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Salesforce Creator Growth — Dominic Ceja</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="style.css" />
+
   <style>
-    .case-wrap { max-width: 980px; margin: 0 auto; padding: 80px 28px 120px; }
-    .back { display:inline-block; margin-bottom:50px; color:var(--muted); }
-    .case-kicker { color:var(--muted); font-weight:600; }
-    .case-title { font-size:clamp(2.8rem,6vw,5.2rem); line-height:1.06; }
-    .case-summary { font-size:1.25rem; color:#3e3e3e; max-width:760px; }
-    .case-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:40px 0 70px; }
-    .case-stat { background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:22px; }
-    .case-stat strong { display:block; font-family:"Manrope",sans-serif; font-size:2rem; }
-    .case-section { padding:42px 0; border-top:1px solid var(--line); }
-    .case-section h2 { font-size:2rem; }
-    .case-placeholder { min-height:280px; border-radius:20px; background:var(--accent-soft); display:grid; place-items:center; color:var(--muted); font-weight:600; margin-top:22px; text-align:center; padding:20px; }
+    .case-wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 80px 28px 120px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 50px;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .back:hover {
+      color: var(--text);
+    }
+
+    .case-kicker {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .case-title {
+      font-size: clamp(2.8rem, 6vw, 5.2rem);
+      line-height: 1.06;
+    }
+
+    .case-summary {
+      font-size: 1.25rem;
+      color: #3e3e3e;
+      max-width: 760px;
+    }
+
+    .case-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 40px 0 70px;
+    }
+
+    .case-stat {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px;
+    }
+
+    .case-stat strong {
+      display: block;
+      font-family: "Manrope", sans-serif;
+      font-size: 2rem;
+    }
+
+    .case-section {
+      padding: 42px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .case-section h2 {
+      font-size: 2rem;
+    }
+
     .embed-gallery {
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:18px;
-      margin-top:28px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 28px;
     }
+
     .embed-card {
-      background:#f8f7f4;
-      border:1px solid var(--line);
-      border-radius:18px;
-      overflow:hidden;
-      box-shadow:0 10px 24px rgba(31,42,68,.05);
+      background: #f8f7f4;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(31, 42, 68, 0.05);
     }
+
     .embed-topbar {
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:12px 14px;
-      border-bottom:1px solid var(--line);
-      font-size:.88rem;
-      color:var(--muted);
-      background:#fffaf4;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.88rem;
+      color: var(--muted);
+      background: #fffaf4;
     }
+
     .embed-video {
-      aspect-ratio:9/16;
-      background:linear-gradient(180deg,#d9e4ef,#bfd0c0);
-      position:relative;
-      display:flex;
-      align-items:flex-end;
-      justify-content:center;
-      padding:16px;
-      text-align:center;
-      color:#1F2A44;
-      font-weight:700;
+      aspect-ratio: 9 / 16;
+      background: linear-gradient(180deg, #d9e4ef, #bfd0c0);
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 16px;
+      text-align: center;
+      color: #1F2A44;
+      font-weight: 700;
     }
+
     .play-button {
-      position:absolute;
-      top:50%;
-      left:50%;
-      transform:translate(-50%,-50%);
-      width:72px;
-      height:72px;
-      border-radius:50%;
-      background:rgba(255,255,255,.82);
-      display:grid;
-      place-items:center;
-      font-size:1.4rem;
-      color:#1F2A44;
-      box-shadow:0 6px 18px rgba(0,0,0,.08);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.82);
+      display: grid;
+      place-items: center;
+      font-size: 1.4rem;
+      color: #1F2A44;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     }
+
     .embed-caption {
-      padding:14px;
-      font-size:.95rem;
-      color:#374151;
+      padding: 14px;
+      font-size: 0.95rem;
+      color: #374151;
     }
-    @media (max-width:820px){
-      .embed-gallery, .case-stats { grid-template-columns:1fr; }
+
+    @media (max-width: 820px) {
+      .embed-gallery,
+      .case-stats {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
   <main class="case-wrap">
     <a class="back" href="index.html">← back to portfolio</a>
 
-    <p class="case-kicker">Salesforce · Product Marketing + Creator Growth</p>
-    <h1 class="case-title">Taking an SMB SaaS story from product messaging to 2M+ campaign views</h1>
+    <p class="case-kicker">
+      Salesforce · Product Marketing + Creator Growth
+    </p>
+
+    <h1 class="case-title">
+      Taking Starter Suite from positioning to a 24% lift in trial-to-paid conversion
+    </h1>
+
     <p class="case-summary">
-      This case study is designed to showcase live social assets in a way that feels closer to Eugene's embedded project windows.
-      Replace the mock cards below with screenshots, short clips, or linked embeds from the work you're comfortable sharing publicly.
+      I helped bring Starter Suite positioning into a cross-platform creator campaign built for
+      small-business audiences. The work spanned messaging, creator execution, and campaign
+      measurement, and ultimately contributed to 2M+ views, 100+ prospective customers, and a
+      24% lift in trial-to-paid conversion.
     </p>
 
     <div class="case-stats">
-      <div class="case-stat"><strong>2M+</strong><span>campaign views</span></div>
-      <div class="case-stat"><strong>+24%</strong><span>trial-to-paid lift</span></div>
-      <div class="case-stat"><strong>100+</strong><span>SMB prospects</span></div>
+      <div class="case-stat">
+        <strong>2M+</strong>
+        <span>campaign views</span>
+      </div>
+
+      <div class="case-stat">
+        <strong>+24%</strong>
+        <span>trial-to-paid conversion</span>
+      </div>
+
+      <div class="case-stat">
+        <strong>100+</strong>
+        <span>prospective customers</span>
+      </div>
     </div>
 
     <section class="case-section">
-      <p class="eyebrow">01 · context</p>
-      <h2>The challenge</h2>
-      <p>[What business or audience problem was the team trying to solve? Keep this to 2–4 sentences.]</p>
-    </section>
+      <p class="eyebrow">01 · the challenge</p>
 
-    <section class="case-section">
-      <p class="eyebrow">02 · ownership</p>
-      <h2>My role</h2>
-      <p>[Clarify what you owned across messaging, creator coordination, briefs, social execution, analytics, or QA.]</p>
-    </section>
+      <h2>
+        Making CRM feel more approachable for small-business audiences
+      </h2>
 
-    <section class="case-section">
-      <p class="eyebrow">03 · live assets</p>
-      <h2>Social reel</h2>
       <p>
-        A flexible module for showcasing live social work. You can swap in screenshots, animated GIFs,
-        still frames, or direct links to the original social posts later.
+        Starter Suite was designed to give small businesses an easier way into Salesforce.
+        The challenge was making the value of CRM feel clear and relevant to newer business
+        owners who were not necessarily thinking in traditional enterprise-software terms.
+      </p>
+
+      <p>
+        We wanted the campaign to meet people where they already were, using social-first
+        content that felt natural on TikTok, Meta, and YouTube while still communicating the
+        product clearly.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <p class="eyebrow">02 · my role</p>
+
+      <h2>
+        From product positioning to campaign execution
+      </h2>
+
+      <p>
+        I worked across messaging, creator strategy, campaign operations, and performance
+        reporting. I helped translate Starter Suite positioning into creator briefs and social
+        concepts, coordinated two agencies and five creators through review and approval cycles,
+        and partnered with Growth, Paid Media, Legal, Brand, and Localization teams to bring
+        the campaign live.
+      </p>
+
+      <p>
+        I also supported campaign measurement through CTA and UTM tracking, reporting, and
+        post-launch analysis so we could see how social engagement translated into product interest
+        and conversion.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <p class="eyebrow">03 · the work</p>
+
+      <h2>
+        Social-first product storytelling
+      </h2>
+
+      <p>
+        A big part of the creative strategy was grounding the product in familiar small-business
+        pain points instead of leading with CRM language. The content focused on the problems
+        business owners were already trying to solve and showed where Salesforce could fit.
+      </p>
+
+      <p>
+        Creator-led content helped the product feel more natural in-feed and gave us a way to
+        communicate benefits through people, scenarios, and formats that audiences already understood.
       </p>
 
       <div class="embed-gallery">
         <article class="embed-card">
           <div class="embed-topbar">
-            <span>starter suite · creator asset</span>
-            <span>video 01</span>
+            <span>Starter Suite · creator campaign</span>
+            <span>asset 01</span>
           </div>
+
           <div class="embed-video">
             <div class="play-button">▶</div>
-            <span>Add a vertical reel screenshot here</span>
+            <span>Add live creator asset or screenshot here</span>
           </div>
-          <div class="embed-caption">Use this caption space to explain the hook, audience, and what the asset was meant to do.</div>
+
+          <div class="embed-caption">
+            Add 1–2 sentences explaining the creative hook, target audience, and what you contributed.
+          </div>
         </article>
 
         <article class="embed-card">
           <div class="embed-topbar">
-            <span>starter suite · creator asset</span>
-            <span>video 02</span>
+            <span>Starter Suite · creator campaign</span>
+            <span>asset 02</span>
           </div>
+
           <div class="embed-video">
             <div class="play-button">▶</div>
-            <span>Add a second reel or short-form video here</span>
+            <span>Add second creator asset here</span>
           </div>
-          <div class="embed-caption">A second asset helps the page feel more alive and proves range across the campaign.</div>
+
+          <div class="embed-caption">
+            Use this space to highlight a different message, audience insight, or creative approach.
+          </div>
         </article>
 
         <article class="embed-card">
           <div class="embed-topbar">
-            <span>starter suite · creator asset</span>
-            <span>video 03</span>
+            <span>Starter Suite · creator campaign</span>
+            <span>asset 03</span>
           </div>
+
           <div class="embed-video">
             <div class="play-button">▶</div>
-            <span>Add a third screenshot or clip here</span>
+            <span>Add third social asset here</span>
           </div>
-          <div class="embed-caption">You can also use this card for a performance recap slide or a static social mockup.</div>
+
+          <div class="embed-caption">
+            This could also hold a campaign recap, performance visual, or static social post.
+          </div>
         </article>
       </div>
     </section>
 
     <section class="case-section">
-      <p class="eyebrow">04 · strategy</p>
-      <h2>How I approached it</h2>
-      <p>[Walk through audience insight → messaging → creator/campaign execution → optimization.]</p>
-      <div class="case-placeholder">Add a sanitized brief, messaging framework, campaign screenshot, or diagram here.</div>
+      <p class="eyebrow">04 · how I approached it</p>
+
+      <h2>
+        Starting with the audience
+      </h2>
+
+      <p>
+        I used social and audience research to understand the language, pain points, and hooks
+        that felt most relevant to small-business audiences. Those insights helped shape creator
+        briefs, scripts, and campaign messaging.
+      </p>
+
+      <p>
+        During production, I coordinated feedback across internal teams and external partners,
+        helped keep assets aligned to brand and product messaging, and supported amplification
+        and measurement once the work went live.
+      </p>
     </section>
 
     <section class="case-section">
       <p class="eyebrow">05 · impact</p>
-      <h2>What happened</h2>
-      <p>[Connect the metrics to the objective. Explain what improved and why it mattered.]</p>
+
+      <h2>
+        Reach was only part of the story
+      </h2>
+
+      <p>
+        The campaign generated more than 2M views across social channels and contributed to
+        100+ prospective SMB customers.
+      </p>
+
+      <p>
+        The stronger signal was downstream. Trial-to-paid conversion increased by 24%, which
+        showed that the campaign was doing more than building awareness. It was helping move
+        audiences further into the product journey.
+      </p>
     </section>
 
     <section class="case-section">
-      <p class="eyebrow">06 · reflection</p>
-      <h2>What I learned</h2>
-      <p>[2–3 sentences on what this project taught you about creator marketing, messaging, or SMB GTM.]</p>
+      <p class="eyebrow">06 · what I learned</p>
+
+      <h2>
+        Product stories work best when the audience can see themselves in them
+      </h2>
+
+      <p>
+        This project reinforced how much good product marketing depends on audience understanding.
+        The strongest content connected product value to a problem the audience already recognized.
+      </p>
+
+      <p>
+        That lesson has stayed with me. Clear positioning matters, but it becomes much more useful
+        when it feels grounded in the way customers actually think and talk.
+      </p>
     </section>
   </main>
 </body>
