@@ -42,13 +42,29 @@
     .case-title {
       font-size: clamp(2.8rem, 6vw, 5.2rem);
       line-height: 1.06;
+      max-width: 900px;
     }
 
     .case-summary {
       font-size: 1.25rem;
       color: #3e3e3e;
       max-width: 760px;
-      margin-bottom: 60px;
+      margin-bottom: 46px;
+    }
+
+    .case-showcase-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      padding: 8px 0 64px;
+    }
+
+    .showcase-item {
+      min-width: 0;
+    }
+
+    .showcase-item .eyebrow {
+      margin-bottom: 12px;
     }
 
     .case-section {
@@ -58,10 +74,10 @@
 
     .case-section h2 {
       font-size: 2rem;
+      line-height: 1.2;
     }
 
     .browser-window {
-      margin-top: 24px;
       border: 1px solid var(--line);
       border-radius: 18px;
       overflow: hidden;
@@ -83,6 +99,7 @@
       height: 10px;
       border-radius: 50%;
       background: #cbb7a5;
+      flex-shrink: 0;
     }
 
     .browser-address {
@@ -94,10 +111,29 @@
       color: var(--muted);
       background: #fffaf4;
       flex: 1;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
 
-    .browser-body {
-      min-height: 380px;
+    .browser-media {
+      background: #ffffff;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+    }
+
+    .browser-media video,
+    .browser-media img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .browser-placeholder {
+      width: 100%;
+      height: 100%;
+      min-height: 280px;
       background: linear-gradient(180deg, #f8fafc, #e7efe7);
       display: grid;
       place-items: center;
@@ -108,8 +144,21 @@
     }
 
     .browser-caption {
-      margin-top: 14px;
+      margin-top: 12px;
       color: #4b5563;
+      font-size: 0.95rem;
+    }
+
+    .asset-note {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    @media (max-width: 820px) {
+      .case-showcase-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -127,10 +176,68 @@
     </h1>
 
     <p class="case-summary">
-      I worked across web copy, launch content, product walkthroughs, campaign briefs, and sales
-      enablement for products including Agentforce and Starter Suite. Much of the work centered on
-      turning technical capabilities into language customers and internal teams could use quickly.
+      I worked across web copy, launch content, product walkthroughs, campaign briefs,
+      and sales enablement for Agentforce and Starter Suite. Much of the work centered
+      on turning technical capabilities into language customers and internal teams
+      could use quickly.
     </p>
+
+    <section class="case-showcase-grid">
+      <article class="showcase-item">
+        <p class="eyebrow">Agentforce</p>
+
+        <div class="browser-window">
+          <div class="browser-topbar">
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+
+            <div class="browser-address">
+              salesforce.com/agentforce/
+            </div>
+          </div>
+
+          <div class="browser-media">
+            <video autoplay muted loop playsinline>
+              <source src="assets/agentforce-demo.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+
+        <p class="browser-caption">
+          Agentforce launch and web messaging. Add a short note here on the copy,
+          CTA, or product narrative you helped shape.
+        </p>
+      </article>
+
+      <article class="showcase-item">
+        <p class="eyebrow">Starter Suite</p>
+
+        <div class="browser-window">
+          <div class="browser-topbar">
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+
+            <div class="browser-address">
+              salesforce.com/small-business/starter/
+            </div>
+          </div>
+
+          <div class="browser-media">
+            <img
+              src="assets/starter-suite-page.jpg"
+              alt="Starter Suite landing page screenshot"
+            />
+          </div>
+        </div>
+
+        <p class="browser-caption">
+          Starter Suite web messaging. Add a short note here on the headlines,
+          body copy, CTAs, or positioning you directly contributed to.
+        </p>
+      </article>
+    </section>
 
     <section class="case-section">
       <p class="eyebrow">01 · the challenge</p>
@@ -140,13 +247,15 @@
       </h2>
 
       <p>
-        Agentforce and Starter Suite came with different audiences and use cases, but both needed
-        clear stories around what the product did, why it mattered, and how customers could use it.
+        Agentforce and Starter Suite came with different audiences and use cases,
+        but both needed clear stories around what the product did, why it mattered,
+        and how customers could use it.
       </p>
 
       <p>
-        I worked in the layer between product priorities and customer-facing communication, helping
-        shape how features showed up across web, social, launch, and enablement materials.
+        I worked in the layer between product priorities and customer-facing
+        communication, helping shape how features showed up across web, social,
+        launch, and enablement materials.
       </p>
     </section>
 
@@ -158,10 +267,10 @@
       </h2>
 
       <p>
-        I wrote and refined customer-facing web copy, creator scripts, product walkthroughs, launch
-        recaps, campaign briefs, and sales materials. I worked with Product Marketing, Growth, Web,
-        Legal, Brand, Localization, Paid Media, and Sales to keep messaging accurate and consistent
-        across channels.
+        I wrote and refined customer-facing web copy, creator scripts, product
+        walkthroughs, launch recaps, campaign briefs, and sales materials.
+        I worked with Product Marketing, Growth, Web, Legal, Brand, Localization,
+        Paid Media, and Sales to keep messaging accurate and consistent across channels.
       </p>
     </section>
 
@@ -173,28 +282,9 @@
       </h2>
 
       <p>
-        For Starter Suite, I focused on making product value easier to understand quickly through
-        headlines, body copy, CTAs, and supporting messaging tied to real SMB use cases.
-      </p>
-
-      <div class="browser-window">
-        <div class="browser-topbar">
-          <span class="browser-dot"></span>
-          <span class="browser-dot"></span>
-          <span class="browser-dot"></span>
-
-          <div class="browser-address">
-            salesforce.com/small-business/starter/
-          </div>
-        </div>
-
-        <div class="browser-body">
-          Add Starter Suite landing-page screenshot here
-        </div>
-      </div>
-
-      <p class="browser-caption">
-        Starter Suite web messaging. Add a short note on the headlines, body copy, CTAs, or positioning you contributed to.
+        For Starter Suite, I focused on making product value easier to understand
+        quickly through headlines, body copy, CTAs, and supporting messaging tied
+        to real SMB use cases.
       </p>
     </section>
 
@@ -206,29 +296,9 @@
       </h2>
 
       <p>
-        Agentforce required a different kind of translation. I supported messaging that connected
-        AI capabilities to practical business outcomes, helping make a fast-moving technical category
-        feel more useful and specific to customers.
-      </p>
-
-      <div class="browser-window">
-        <div class="browser-topbar">
-          <span class="browser-dot"></span>
-          <span class="browser-dot"></span>
-          <span class="browser-dot"></span>
-
-          <div class="browser-address">
-            salesforce.com/agentforce/
-          </div>
-        </div>
-
-        <div class="browser-body">
-          Add Agentforce webpage screenshot here
-        </div>
-      </div>
-
-      <p class="browser-caption">
-        Agentforce messaging. Use this caption to explain the copy, CTA, or narrative you helped shape.
+        Agentforce required a different kind of translation. I supported messaging
+        that connected AI capabilities to practical business outcomes, helping make
+        a fast-moving technical category feel more useful and specific to customers.
       </p>
     </section>
 
@@ -240,13 +310,14 @@
       </h2>
 
       <p>
-        I also built launch recaps, product walkthroughs, campaign briefs, and sales-facing materials
-        that gave teams clearer guidance around value propositions, customer use cases, and campaign priorities.
+        I also built launch recaps, product walkthroughs, campaign briefs, and
+        sales-facing materials that gave teams clearer guidance around value
+        propositions, customer use cases, and campaign priorities.
       </p>
 
       <p>
-        Those materials helped connect the customer story to day-to-day execution across Sales,
-        Marketing, and partner teams.
+        Those materials helped connect the customer story to day-to-day execution
+        across Sales, Marketing, and partner teams.
       </p>
     </section>
 
@@ -258,9 +329,9 @@
       </h2>
 
       <p>
-        This work made me more interested in the communications side of product marketing.
-        How a product is explained influences whether customers understand it, whether teams can
-        sell it, and whether people can picture themselves using it.
+        This work made me more interested in the communications side of product
+        marketing. How a product is explained influences whether customers understand
+        it, whether teams can sell it, and whether people can picture themselves using it.
       </p>
     </section>
   </main>
