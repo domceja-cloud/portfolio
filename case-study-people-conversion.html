@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>People Magazine Conversion Case Study — Dominic Ceja</title>
+  <title>People Inc. Customer Story Case Study — Dominic Ceja</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,6 +42,7 @@
     .case-title {
       font-size: clamp(2.8rem, 6vw, 5.2rem);
       line-height: 1.06;
+      max-width: 900px;
     }
 
     .case-summary {
@@ -52,9 +53,9 @@
 
     .case-stats {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 14px;
-      margin: 40px 0 70px;
+      margin: 40px 0 46px;
     }
 
     .case-stat {
@@ -70,17 +71,25 @@
       font-size: 2rem;
     }
 
-    .case-section {
-      padding: 42px 0;
-      border-top: 1px solid var(--line);
+    .case-showcase {
+      padding: 8px 0 64px;
     }
 
-    .case-section h2 {
-      font-size: 2rem;
+    .case-showcase .eyebrow {
+      margin-bottom: 12px;
     }
 
-    .browser-window {
-      margin-top: 24px;
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .story-card {
+      min-width: 0;
+    }
+
+    .story-visual {
       border: 1px solid var(--line);
       border-radius: 18px;
       overflow: hidden;
@@ -88,51 +97,53 @@
       box-shadow: 0 10px 24px rgba(31, 42, 68, 0.05);
     }
 
-    .browser-topbar {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 16px;
-      background: #f3efe8;
-      border-bottom: 1px solid var(--line);
+    .story-visual img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
-    .browser-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #cbb7a5;
-    }
-
-    .browser-address {
-      margin-left: 10px;
-      padding: 7px 12px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      font-size: 0.86rem;
-      color: var(--muted);
-      background: #fffaf4;
-      flex: 1;
-    }
-
-    .browser-body {
-      min-height: 380px;
-      background: linear-gradient(180deg, #fff7ef, #f1e6d7);
-      display: grid;
-      place-items: center;
-      text-align: center;
-      color: #5C4033;
-      padding: 24px;
-      font-weight: 600;
-    }
-
-    .browser-caption {
-      margin-top: 14px;
+    .story-caption {
+      margin-top: 12px;
       color: #4b5563;
+      font-size: 0.95rem;
+    }
+
+    .case-section {
+      padding: 42px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .case-section h2 {
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    .proof-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .proof-card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+      background: var(--surface);
+    }
+
+    .proof-card strong {
+      display: block;
+      font-family: "Manrope", sans-serif;
+      font-size: 1.55rem;
+      margin-bottom: 4px;
     }
 
     @media (max-width: 820px) {
-      .case-stats {
+      .case-stats,
+      .story-grid,
+      .proof-row {
         grid-template-columns: 1fr;
       }
     }
@@ -144,43 +155,81 @@
     <a class="back" href="index.html">← back to portfolio</a>
 
     <p class="case-kicker">
-      People Inc. · Demand Gen + Conversion
+      People Inc. · Customer Storytelling + Product Marketing
     </p>
 
     <h1 class="case-title">
-      Rewriting a webinar journey to increase conversion 29%
+      Turning D/Cipher campaign results into customer proof
     </h1>
 
     <p class="case-summary">
-      I worked with Design and Editorial to improve the messaging and experience of a B2B webinar
-      landing page. We focused on making the value of the event easier to understand and giving
-      visitors a clearer path to register.
+      I supported the development of public-facing customer stories for D/Cipher,
+      helping turn campaign performance and audience insights into a clearer story
+      about the product’s value.
     </p>
 
     <div class="case-stats">
       <div class="case-stat">
-        <strong>+29%</strong>
-        <span>funnel conversion</span>
+        <strong>+7.5 PPTS</strong>
+        <span>brand awareness</span>
       </div>
 
       <div class="case-stat">
-        <strong>540+</strong>
-        <span>new prospects</span>
+        <strong>+5.1 PPTS</strong>
+        <span>purchase intent</span>
+      </div>
+
+      <div class="case-stat">
+        <strong>+153%</strong>
+        <span>CTR lift on holiday gift reviews</span>
       </div>
     </div>
+
+    <section class="case-showcase">
+      <p class="eyebrow">the customer story</p>
+
+      <div class="story-grid">
+        <article class="story-card">
+          <div class="story-visual">
+            <img
+              src="assets/people-dcipher-results.jpg"
+              alt="D/Cipher jewelry brand customer story showing full-funnel campaign results"
+            />
+          </div>
+
+          <p class="story-caption">
+            The first page connects the customer challenge and D/Cipher audience strategy
+            to measurable gains across brand awareness, purchase intent, and the broader funnel.
+          </p>
+        </article>
+
+        <article class="story-card">
+          <div class="story-visual">
+            <img
+              src="assets/people-dcipher-insights.jpg"
+              alt="D/Cipher jewelry brand customer story showing consumer insights and CTR lifts"
+            />
+          </div>
+
+          <p class="story-caption">
+            The second page turns performance data into audience insight, showing where
+            jewelry intenders were most engaged across gifting and fashion-related content.
+          </p>
+        </article>
+      </div>
+    </section>
 
     <section class="case-section">
       <p class="eyebrow">01 · the challenge</p>
 
       <h2>
-        Making the value of the webinar easier to see
+        Turning campaign performance into a story customers could use
       </h2>
 
       <p>
-        The landing page had to convince prospective customers that the event was worth their time
-        before asking them to register. We saw an opportunity to make that decision easier by
-        sharpening the messaging, improving the page hierarchy, and emphasizing what attendees
-        would actually get from the experience.
+        The campaign had strong results, but the customer-facing story still needed to make
+        the value of D/Cipher easy to understand. The goal was to connect the brand’s business
+        challenge, audience strategy, and performance into one clear narrative.
       </p>
     </section>
 
@@ -188,78 +237,85 @@
       <p class="eyebrow">02 · my role</p>
 
       <h2>
-        Bringing audience insight into the page experience
+        Shaping performance into a clearer narrative
       </h2>
 
       <p>
-        I worked alongside Design and Editorial on the headline, supporting copy, CTA language,
-        and overall page narrative. I also used audience, search, and competitive research to help
-        shape the messaging around what prospective attendees were most likely to care about.
+        I supported the development of the customer story by helping translate campaign
+        performance and audience insights into concise, customer-facing messaging.
+        The work brought together the business challenge, D/Cipher solution, audience
+        segments, and results in a format that was easy to scan and understand.
       </p>
     </section>
 
     <section class="case-section">
-      <p class="eyebrow">03 · the landing page</p>
+      <p class="eyebrow">03 · the story</p>
 
       <h2>
-        Giving the page a clearer story
+        From business challenge to measurable proof
       </h2>
 
       <p>
-        We structured the page around the questions a visitor needed answered before registering.
-        What is the event? Why is it relevant? What will I get from attending? What should I do next?
+        The case study followed a simple arc. A national jewelry brand wanted to broaden
+        perceptions of its product range ahead of Valentine’s Day. D/Cipher used gifting
+        and fashion-focused intent segments to reach relevant audiences across the open web.
       </p>
 
-      <div class="browser-window">
-        <div class="browser-topbar">
-          <span class="browser-dot"></span>
-          <span class="browser-dot"></span>
-          <span class="browser-dot"></span>
+      <p>
+        The results gave the story its proof points, including a 7.5-point lift in brand
+        awareness, a 5.1-point lift in purchase intent, and a 6-point lift in incremental
+        performance across the funnel.
+      </p>
 
-          <div class="browser-address">
-            webinar registration page
-          </div>
+      <div class="proof-row">
+        <div class="proof-card">
+          <strong>+6 PPTS</strong>
+          <span>incremental performance across the funnel</span>
         </div>
 
-        <div class="browser-body">
-          Add landing-page screenshot here
+        <div class="proof-card">
+          <strong>+7.5 PPTS</strong>
+          <span>brand awareness</span>
+        </div>
+
+        <div class="proof-card">
+          <strong>+5.1 PPTS</strong>
+          <span>purchase intent</span>
         </div>
       </div>
+    </section>
 
-      <p class="browser-caption">
-        Add your landing-page screenshot here and note the copy, CTA, or page elements you helped improve.
+    <section class="case-section">
+      <p class="eyebrow">04 · the insight</p>
+
+      <h2>
+        Finding the story behind the numbers
+      </h2>
+
+      <p>
+        The performance data also showed where the audience was most engaged.
+        Holiday gift reviews drove a 153% CTR lift, fashion-trend content drove a
+        60% lift, and awards-show content saw a 17% boost.
+      </p>
+
+      <p>
+        Those findings gave the customer story more depth by showing how intent signals
+        could reveal the contexts and content themes that mattered most to consumers.
       </p>
     </section>
 
     <section class="case-section">
-      <p class="eyebrow">04 · what changed</p>
+      <p class="eyebrow">05 · why it mattered</p>
 
       <h2>
-        A sharper message and an easier path to register
+        Making the product value easier to see
       </h2>
 
       <p>
-        The refreshed page put more emphasis on the headline, value proposition, supporting copy,
-        and registration flow. The goal was to make the reason to attend more immediate and reduce
-        the amount of interpretation required from the visitor.
-      </p>
-    </section>
-
-    <section class="case-section">
-      <p class="eyebrow">05 · impact</p>
-
-      <h2>
-        Clearer messaging helped improve the funnel
-      </h2>
-
-      <p>
-        After the changes, funnel conversion increased by <strong>29%</strong>, helping the program
-        generate more than <strong>540 new prospects</strong>.
-      </p>
-
-      <p>
-        It was one of my clearest early examples of how copy and information hierarchy can influence
-        measurable customer behavior.
+        The finished story made D/Cipher’s value more concrete by tying the product
+        directly to a customer challenge, an audience strategy, and measurable outcomes.
+        It gave the results a narrative that could be understood quickly without losing
+        the detail behind them.
       </p>
     </section>
 
@@ -267,12 +323,13 @@
       <p class="eyebrow">06 · what I learned</p>
 
       <h2>
-        Clarity can be a growth lever
+        Data is more useful when it tells a story
       </h2>
 
       <p>
-        This project changed how I think about conversion work. Sometimes the biggest opportunity
-        is simply making the value of something easier to understand.
+        This project reinforced how customer evidence can make a product story stronger.
+        Performance metrics become much more useful when people can understand what drove
+        them and why they matter.
       </p>
     </section>
   </main>
