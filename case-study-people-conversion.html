@@ -3,17 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>People Magazine Customer Story Case Study — Dominic Ceja</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap"
-    rel="stylesheet"
-  >
-
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 
   <style>
@@ -89,24 +82,10 @@
       min-width: 0;
     }
 
-    .story-visual {
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      overflow: hidden;
-      background: #ffffff;
-      box-shadow: 0 10px 24px rgba(31, 42, 68, 0.05);
-    }
-
-    .story-visual img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
     .story-caption {
       margin-top: 12px;
       color: #4b5563;
-      font-size: 0.95rem;
+      font-size: .95rem;
     }
 
     .case-section {
@@ -140,6 +119,92 @@
       margin-bottom: 4px;
     }
 
+    .story-browser {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 10px 24px rgba(31, 42, 68, .05);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    .story-browser-link {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .story-browser-link:hover .story-browser {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 34px rgba(31, 42, 68, .09);
+    }
+
+    .story-browser-top {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 14px;
+      background: #f3efe8;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .story-browser-top i {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #cbb7a5;
+      display: block;
+    }
+
+    .story-browser-address {
+      margin-left: 8px;
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fffaf4;
+      color: var(--muted);
+      font-size: .82rem;
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .story-browser-address a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .story-live-button {
+      border: 1px solid var(--line);
+      background: #fffaf4;
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 7px 10px;
+      font: inherit;
+      font-size: .74rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .story-visual {
+      background: #fff;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      position: relative;
+    }
+
+    .story-visual img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+
     @media (max-width: 820px) {
       .case-stats,
       .story-grid,
@@ -159,13 +224,11 @@
     </p>
 
     <h1 class="case-title">
-      Using D/Cipher campaign results to build customer proof
+      Distilling performance data into product evidence for ad-tech
     </h1>
 
     <p class="case-summary">
-      I supported the development of public-facing customer stories for D/Cipher,
-      helping turn campaign performance and audience insights into a clearer story
-      about the product’s value.
+      I supported the development of public-facing customer stories for D/Cipher, helping turn campaign performance and audience insights into a clearer story about the product’s value.
     </p>
 
     <div class="case-stats">
@@ -190,30 +253,84 @@
 
       <div class="story-grid">
         <article class="story-card">
-          <div class="story-visual">
-            <img
-              src="assets/people-dcipher-results.jpg"
-              alt="D/Cipher jewelry brand customer story showing full-funnel campaign results"
-            />
+          <div class="story-browser">
+            <div class="story-browser-top">
+              <i></i>
+              <i></i>
+              <i></i>
+
+              <div class="story-browser-address">
+                <a
+                  href="https://view.highspot.com/viewer/89b17f359d4e6967e48725a0ef8ff121#1"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  D/Cipher Off-Property Case Study · page 1 ↗
+                </a>
+              </div>
+
+              <a
+                class="story-live-button"
+                href="https://view.highspot.com/viewer/89b17f359d4e6967e48725a0ef8ff121#1"
+                target="_blank"
+                rel="noreferrer"
+              >
+                open live ↗
+              </a>
+            </div>
+
+            <div class="story-visual">
+              <img
+                class="story-preview-image"
+                src="assets/dcipher-results.jpg"
+                alt="D/Cipher jewelry brand customer story showing full-funnel campaign results"
+              >
+            </div>
           </div>
 
           <p class="story-caption">
-            The first page connects the customer challenge and D/Cipher audience strategy
-            to measurable gains across brand awareness, purchase intent, and the broader funnel.
+            The first page connects the customer challenge and D/Cipher audience strategy to measurable gains across brand awareness, purchase intent, and the broader funnel.
           </p>
         </article>
 
         <article class="story-card">
-          <div class="story-visual">
-            <img
-              src="assets/people-dcipher-insights.jpg"
-              alt="D/Cipher jewelry brand customer story showing consumer insights and CTR lifts"
-            />
+          <div class="story-browser">
+            <div class="story-browser-top">
+              <i></i>
+              <i></i>
+              <i></i>
+
+              <div class="story-browser-address">
+                <a
+                  href="https://view.highspot.com/viewer/89b17f359d4e6967e48725a0ef8ff121#2"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  D/Cipher Off-Property Case Study · page 2 ↗
+                </a>
+              </div>
+
+              <a
+                class="story-live-button"
+                href="https://view.highspot.com/viewer/89b17f359d4e6967e48725a0ef8ff121#2"
+                target="_blank"
+                rel="noreferrer"
+              >
+                open live ↗
+              </a>
+            </div>
+
+            <div class="story-visual">
+              <img
+                class="story-preview-image"
+                src="assets/dcipher-insights.jpg"
+                alt="D/Cipher jewelry brand customer story showing consumer insights and CTR lifts"
+              >
+            </div>
           </div>
 
           <p class="story-caption">
-            The second page turns performance data into audience insight, showing where
-            jewelry intenders were most engaged across gifting and fashion-related content.
+            The second page turns performance data into audience insight, showing where jewelry intenders were most engaged across gifting and fashion-related content.
           </p>
         </article>
       </div>
@@ -221,50 +338,40 @@
 
     <section class="case-section">
       <p class="eyebrow">01 · the challenge</p>
-
-      <h2>
-        Turning campaign performance into a story customers could use
-      </h2>
+      <h2>Turning campaign performance into a story customers could use</h2>
 
       <p>
-        The campaign had strong results, but the customer-facing story still needed to make
-        the value of D/Cipher easy to understand. The goal was to connect the brand’s business
-        challenge, audience strategy, and performance into one clear narrative.
+        The campaign had strong results, but metrics alone did not explain why D/Cipher mattered. The product-marketing challenge was to turn performance into customer proof: a story that connected the advertiser’s business problem, D/Cipher’s intent-based audience strategy, and the measurable outcome in a way a buyer could understand quickly.
+      </p>
+
+      <p>
+        That meant deciding which numbers were actually persuasive, what context they needed, and how to show the product’s value without turning the story into a dense performance report.
       </p>
     </section>
 
     <section class="case-section">
       <p class="eyebrow">02 · my role</p>
-
-      <h2>
-        Shaping performance into a clearer narrative
-      </h2>
+      <h2>Shaping performance into a clearer narrative</h2>
 
       <p>
-        I supported the development of the customer story by helping translate campaign
-        performance and audience insights into concise, customer-facing messaging.
-        The work brought together the business challenge, D/Cipher solution, audience
-        segments, and results in a format that was easy to scan and understand.
+        I supported the development of the customer story by shaping campaign performance and audience insights into concise, customer-facing messaging. I helped organize the narrative around four questions a prospective customer would care about: what problem the advertiser was solving, which audiences D/Cipher identified, how the product reached them, and what changed as a result.
+      </p>
+
+      <p>
+        That structure turned a set of media metrics into a reusable proof point for the product and gave GTM teams a cleaner way to explain D/Cipher’s value in customer conversations and enablement materials.
       </p>
     </section>
 
     <section class="case-section">
       <p class="eyebrow">03 · the story</p>
-
-      <h2>
-        From business challenge to measurable proof
-      </h2>
+      <h2>From business challenge to measurable proof</h2>
 
       <p>
-        The case study followed a simple arc. A national jewelry brand wanted to broaden
-        perceptions of its product range ahead of Valentine’s Day. D/Cipher used gifting
-        and fashion-focused intent segments to reach relevant audiences across the open web.
+        The story followed a deliberate business-to-product arc. A national jewelry brand wanted to broaden perceptions of its assortment and drive purchases ahead of Valentine’s Day. D/Cipher used gifting, apparel, fashion-jewelry, and fashion-trend intent segments to reach consumers whose behavior indicated relevance across the premium open web.
       </p>
 
       <p>
-        The results gave the story its proof points, including a 7.5-point lift in brand
-        awareness, a 5.1-point lift in purchase intent, and a 6-point lift in incremental
-        performance across the funnel.
+        The results became the proof layer of the positioning: a 7.5-point lift in brand awareness, a 5.1-point lift in purchase intent, and a 6-point lift in incremental performance across the funnel. Presenting those outcomes together helped show that the value extended beyond a single click metric.
       </p>
 
       <div class="proof-row">
@@ -287,51 +394,67 @@
 
     <section class="case-section">
       <p class="eyebrow">04 · the insight</p>
-
-      <h2>
-        Finding the story behind the numbers
-      </h2>
+      <h2>Finding the story behind the numbers</h2>
 
       <p>
-        The performance data also showed where the audience was most engaged.
-        Holiday gift reviews drove a 153% CTR lift, fashion-trend content drove a
-        60% lift, and awards-show content saw a 17% boost.
+        The performance data also gave us a second layer of product insight: where the audience was most responsive. Holiday gift reviews drove a 153% CTR lift, fashion-trend content drove a 60% lift, and awards-show content saw a 17% boost.
       </p>
 
       <p>
-        Those findings gave the customer story more depth by showing how intent signals
-        could reveal the contexts and content themes that mattered most to consumers.
+        Instead of treating those numbers as isolated optimizations, the story connected them back to D/Cipher’s core value proposition. Intent signals were not only helping find an audience; they were revealing the content contexts and consumer mindsets most likely to drive engagement.
       </p>
     </section>
 
     <section class="case-section">
       <p class="eyebrow">05 · why it mattered</p>
-
-      <h2>
-        Making the product value easier to see
-      </h2>
+      <h2>Making the product value easier to see</h2>
 
       <p>
-        The finished story made D/Cipher’s value more concrete by tying the product
-        directly to a customer challenge, an audience strategy, and measurable outcomes.
-        It gave the results a narrative that could be understood quickly without losing
-        the detail behind them.
+        The finished story made D/Cipher’s value more concrete by tying the product directly to a customer challenge, an audience strategy, and measurable outcomes. That matters in product marketing because customer evidence gives buyers a reason to believe the positioning, not just understand it.
+      </p>
+
+      <p>
+        It also created a compact asset that could support broader GTM and sales-enablement work: a real example of the product finding relevant audiences, surfacing useful insights, and driving movement across the funnel.
       </p>
     </section>
 
     <section class="case-section">
       <p class="eyebrow">06 · what I learned</p>
-
-      <h2>
-        Data is more useful when it tells a story
-      </h2>
+      <h2>Data is more useful when it tells a story</h2>
 
       <p>
-        This project reinforced how customer evidence can make a product story stronger.
-        Performance metrics become much more useful when people can understand what drove
-        them and why they matter.
+        This project reinforced that the strongest customer stories do more than celebrate a result. They explain the mechanism behind it. For product marketing, that means choosing proof points that reinforce the value proposition and giving the audience enough context to understand why the outcome is meaningful.
       </p>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-connect">
+        <p class="footer-title">let’s connect.</p>
+        <a href="mailto:dominicceja4@gmail.com">dominicceja4@gmail.com</a>
+      </div>
+
+      <div class="footer-column">
+        <p class="footer-label">explore</p>
+        <a href="index.html#top">about me</a>
+        <a href="index.html#experience">experience</a>
+        <a href="index.html#work">projects</a>
+        <a href="index.html#writing">writing</a>
+      </div>
+
+      <div class="footer-column">
+        <p class="footer-label">find me</p>
+        <a href="assets/Dominic-Ceja-Resume.pdf" target="_blank">résumé ↗</a>
+        <a href="https://www.linkedin.com/in/dominic-ceja-4233802a6/" target="_blank" rel="noreferrer">linkedin ↗</a>
+        <a href="https://www.dailycal.org/users/profile/dominic%20ceja/" target="_blank" rel="noreferrer">writer archive ↗</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Dominic Ceja</span>
+      <span>Built with HTML + CSS and hosted on GitHub Pages.</span>
+    </div>
+  </footer>
 </body>
 </html>
