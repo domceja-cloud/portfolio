@@ -346,12 +346,17 @@ nav a:hover {
 
 
 .button-secondary {
-  background: var(--surface);
-  color: var(--text);
+  background: #43506B;
+  color: #FFFAF4;
 
-  border: 1px solid var(--line);
+  border: 1px solid #43506B;
 }
 
+
+.button-secondary:hover {
+  background: #53617D;
+  border-color: #53617D;
+}
 
 
 /* ------------------------------
