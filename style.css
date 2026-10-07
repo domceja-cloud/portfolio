@@ -1711,6 +1711,11 @@ nav a:hover {
 }
 
 
+.visual-two video {
+  transform: translateY(-8px) scale(1.02);
+}
+
+
 .visual-three {
   background: #E7D5BB;
 }
