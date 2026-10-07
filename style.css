@@ -340,22 +340,29 @@ nav a:hover {
 
 
 .button-primary {
-  background: var(--text);
-  color: var(--surface);
-}
-
-
-.button-secondary {
-  background: #43506B;
+  background: #1F2A44;
   color: #FFFAF4;
-
-  border: 1px solid #43506B;
+  border: 2px solid #1F2A44;
 }
 
+.button-resume {
+  background: #4B5C7C;
+  color: #FFFAF4;
+  border: 2px solid #1F2A44;
+}
 
-.button-secondary:hover {
-  background: #53617D;
-  border-color: #53617D;
+.button-linkedin {
+  background: #A9BBD2;
+  color: #1F2A44;
+  border: 2px solid #4B5C7C;
+}
+
+.button-resume:hover {
+  background: #566887;
+}
+
+.button-linkedin:hover {
+  background: #B8C6D9;
 }
 
 
