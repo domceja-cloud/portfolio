@@ -582,7 +582,7 @@ nav a:hover {
   stroke-linecap: round;
   stroke-linejoin: round;
 
-  opacity: .58;
+  opacity: .70;
 
   animation:
     editorial-drift
@@ -833,6 +833,7 @@ nav a:hover {
 
 @keyframes editorial-drift {
 
+  
   0% {
     transform:
       translate3d(0, 0, 0)
@@ -843,11 +844,11 @@ nav a:hover {
     transform:
       translate3d(
         calc(var(--x, 6px) * .45),
-        calc(var(--y, -7px) * .55),
+        calc(var(--y, -7px) - 5px),
         0
       )
       rotate(
-        calc(var(--r, 3deg) * .5)
+        calc(var(--r, 3deg) * .6)
       );
   }
 
@@ -862,9 +863,7 @@ nav a:hover {
         var(--r, 3deg)
       );
   }
-
 }
-
 
 
 /* ------------------------------
@@ -1377,6 +1376,25 @@ nav a:hover {
 }
 
 
+/* Slightly richer editorial icon palette */
+.editorial-floaties .editorial-icon:nth-child(3n + 1),
+.section-floaties .editorial-icon:nth-child(3n + 1),
+.footer-floaties .editorial-icon:nth-child(3n + 1) {
+  color: #7F947B;
+}
+
+.editorial-floaties .editorial-icon:nth-child(3n + 2),
+.section-floaties .editorial-icon:nth-child(3n + 2),
+.footer-floaties .editorial-icon:nth-child(3n + 2) {
+  color: #7890B2;
+}
+
+.editorial-floaties .editorial-icon:nth-child(3n),
+.section-floaties .editorial-icon:nth-child(3n),
+.footer-floaties .editorial-icon:nth-child(3n) {
+  color: #33415F;
+}
+
 
 /* ------------------------------
    SEE IT LIVE
@@ -1719,7 +1737,7 @@ nav a:hover {
 
 
 .visual-two video {
-  transform: translateY(-8px) scale(1.02);
+  transform: translateY(-10px) scale(1.045);
 }
 
 
