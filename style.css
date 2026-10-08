@@ -339,30 +339,19 @@ nav a:hover {
 }
 
 
-.button-primary {
+.button-primary,
+.button-resume,
+.button-linkedin {
   background: #1F2A44;
   color: #FFFAF4;
   border: 2px solid #1F2A44;
 }
 
-.button-resume {
-  background: #4B5C7C;
-  color: #FFFAF4;
-  border: 2px solid #1F2A44;
-}
-
-.button-linkedin {
-  background: #A9BBD2;
-  color: #1F2A44;
-  border: 2px solid #4B5C7C;
-}
-
-.button-resume:hover {
-  background: #566887;
-}
-
+.button-primary:hover,
+.button-resume:hover,
 .button-linkedin:hover {
-  background: #B8C6D9;
+  background: #33415F;
+  border-color: #33415F;
 }
 
 
